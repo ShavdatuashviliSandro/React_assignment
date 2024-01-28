@@ -1,12 +1,20 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+interface MovieTypes {
+    movies: any[],
+    favorites: any[]
+    ratings: any
+}
+
+const initialState: MovieTypes = {
+    movies: [],
+    favorites: [],
+    ratings: {},
+}
+
 const movieSlice = createSlice({
     name: 'movie',
-    initialState: {
-        movies: [],
-        favorites: [],
-        ratings: {},
-    },
+    initialState,
     reducers: {
         setMovies: (state, action) => {
             state.movies = action.payload;
