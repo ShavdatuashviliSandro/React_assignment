@@ -4,7 +4,7 @@ import { login } from "../redux/authSlice";
 import axios from "axios";
 
 const LoginForm = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const [formData, setFormData] = useState({ email: "", password: "" });
 
@@ -16,14 +16,14 @@ const LoginForm = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    try {
-      const response = await axios.post("/api/auth/login", formData); // api endpoint is /api/auth/login
-      dispatch(login(response.data.user));
-      // actions after successful login
-    } catch (error) {
-      console.error("Login failed:", error);
+    // try {
+    //   const response = await axios.post("/api/auth/login", formData); // api endpoint is /api/auth/login
+    //   dispatch(login(response.data.user));
+    //   // actions after successful login
+    // } catch (error) {
+    //   console.error("Login failed:", error);
 
-    }
+    // }
   };
 
   return (

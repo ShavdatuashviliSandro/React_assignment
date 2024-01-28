@@ -1,7 +1,7 @@
-import React from 'react'
-
 export default function HomePage() {
   return (
-    <div>HomePage</div>
-  )
+    <>
+      <h1 className="text-center text-4xl mt-4">Welcome to movies app</h1>
+    </>
+  );
 }
