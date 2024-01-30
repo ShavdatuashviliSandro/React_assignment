@@ -1,17 +1,13 @@
-// client/src/components/Navbar.tsx
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { logout } from '../redux/authSlice';
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   const isAuthenticated = useSelector((state: any) => state.auth.isAuthenticated);
   const dispatch = useDispatch();
 
   const handleLogout = () => {
-    // Perform logout logic
     dispatch(logout());
-    // Redirect or perform other actions after logout
   };
 
   return (
